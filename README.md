@@ -59,8 +59,8 @@ To reproduce individual sections of the manuscript independently, see the per-se
 ├── validation/                        maps to Section 3.8
 │   ├── validation_harness.py          FIPS 197 + AESAVS subsets + Monte Carlo float64
 │   ├── build_aes_fast.py              cached network builder (28x speedup)
-│   ├── run_float32_mc.py              Monte Carlo with float32 arithmetic
-│   ├── consolidate_results.py         summary aggregator
+│   ├── run_float32_mc.py              standalone Monte Carlo (deprecated; harness includes float32)
+│   ├── consolidate_results.py         summary aggregator (deprecated; harness prints summary)
 │   └── results.txt                    canonical bit-exact outcomes from the published run
 │
 ├── scanner_evaluation/                maps to Appendix A
@@ -79,9 +79,7 @@ To reproduce individual sections of the manuscript independently, see the per-se
 
 ```bash
 cd validation
-python3 validation_harness.py     # FIPS 197 + AESAVS + Monte Carlo float64 (~4 min)
-python3 run_float32_mc.py          # Monte Carlo float32 (~11 min)
-python3 consolidate_results.py     # summary aggregator
+python3 validation_harness.py     # FIPS 197 + AESAVS + Monte Carlo float64 + Monte Carlo float32 (~15 min)
 ```
 
 Expected output: bit-exact pass on every test. Compare to `validation/results.txt` for the canonical numeric outcomes (20,296 vectors and pairs total, all pass).

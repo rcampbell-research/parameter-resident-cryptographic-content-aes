@@ -17,8 +17,6 @@ echo "    Expected: 20,296/20,296 vectors and pairs pass bit-exactly"
 echo "    Wall time: ~15 minutes"
 cd validation
 python3 validation_harness.py
-python3 run_float32_mc.py
-python3 consolidate_results.py
 cd "${REPO_ROOT}"
 echo
 
