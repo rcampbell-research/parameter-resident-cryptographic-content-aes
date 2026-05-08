@@ -2,6 +2,7 @@
 Consolidate all validation results: FIPS 197, AESAVS subsets, Monte Carlo float64, Monte Carlo float32.
 """
 import json
+import os
 
 # AESAVS results (from scanner_output/14_validation_run.txt)
 aesavs = [
@@ -21,7 +22,10 @@ mc_f64 = {
 }
 
 # Monte Carlo float32 (from scanner_output/15_float32_mc.json)
-with open('/home/claude/scanner_output/15_float32_mc.json') as f:
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_OUT_DIR = os.path.join(_HERE, '..', 'last_run')
+os.makedirs(_OUT_DIR, exist_ok=True)
+with open(os.path.join(_OUT_DIR, '15_float32_mc.json')) as f:
     mc_f32 = json.load(f)
 
 # FIPS 197 Appendix A (key expansion, 11 round keys all match)
@@ -56,7 +60,7 @@ print(f"  float32: {mc_f32['passes']}/{mc_f32['n_pairs']} ({mc_f32['wall_time_s'
 print()
 print("All checks bit-exact. Total wall time: ~15 minutes.")
 
-with open('/home/claude/scanner_output/16_validation_summary.json', 'w') as f:
+with open(os.path.join(_OUT_DIR, '16_validation_summary.json'), 'w') as f:
     json.dump(summary, f, indent=2, default=str)
 print()
 print("Summary saved to scanner_output/16_validation_summary.json")

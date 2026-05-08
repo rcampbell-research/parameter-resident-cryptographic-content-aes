@@ -1,4 +1,13 @@
+# Core requirements for validation reproduction (§3.8 of manuscript)
+# Tested on Python 3.10 - 3.12.
 numpy>=1.24
 safetensors>=0.4
-picklescan==1.0.4
-modelscan==0.8.8
+
+# Optional: required only for Appendix A scanner evaluation reproduction.
+# These packages cap Python at <3.13. If you are on Python 3.13+, install
+# them in a separate Python 3.10–3.12 environment, or skip Appendix A
+# reproduction (the verbatim outputs are in scanner_evaluation/expected_output/).
+#
+# picklescan==1.0.4
+# modelscan==0.8.8
+

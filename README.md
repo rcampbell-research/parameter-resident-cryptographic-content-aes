@@ -23,7 +23,7 @@ The contribution is the existence of the capability, the absence of detection in
 ## Prerequisites
 
 - Linux environment (tested on Ubuntu 24.04)
-- Python 3.10 or later
+- **Python 3.10 to 3.12** for full reproduction including Appendix A scanner evaluation. Python 3.13+ works for the §3.8 validation harness and Appendix B fine-tuning experiment, but `picklescan` and `modelscan` (used in Appendix A) currently cap Python at <3.13. If you are on Python 3.13+, you can either run the §3.8 and Appendix B reproductions on your current environment, or set up a Python 3.10–3.12 environment specifically for Appendix A, or skip Appendix A reproduction entirely (the verbatim scanner outputs are in `scanner_evaluation/expected_output/`).
 - pip with PyPI access
 - Approximately 1 GB of free disk space
 

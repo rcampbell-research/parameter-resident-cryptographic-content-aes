@@ -5,7 +5,11 @@ import time
 import json
 import sys
 import numpy as np
-sys.path.insert(0, '/home/claude')
+import os
+_HERE = os.path.dirname(os.path.abspath(__file__))
+_OUT_DIR = os.path.join(_HERE, '..', 'last_run')
+os.makedirs(_OUT_DIR, exist_ok=True)
+sys.path.insert(0, _HERE)
 from validation_harness import (
     aes_encrypt, encrypt_via_network, build_aes_network,
 )
@@ -58,7 +62,7 @@ elapsed = time.time() - t0
 print(flush=True)
 print(f"FINAL: {total_passes}/{TOTAL} passed, {len(total_failures)} failures, {elapsed:.0f}s ({elapsed/60:.1f} min)", flush=True)
 
-with open('/home/claude/scanner_output/15_float32_mc.json', 'w') as f:
+with open(os.path.join(_OUT_DIR, '15_float32_mc.json'), 'w') as f:
     json.dump({
         'n_pairs': TOTAL,
         'dtype': 'float32',

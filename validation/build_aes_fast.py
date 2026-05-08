@@ -8,7 +8,14 @@ MixColumns matrix are key-independent and can be computed once.
 Per-key components: the layer-0 (initial AddRoundKey) and the W_post layers at
 each round (which encode the round-key bits in biases and sign-couple weight rows).
 """
+import os
+import sys
 import numpy as np
+
+# Allow imports from construction/ (sibling directory)
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(_HERE, '..', 'construction'))
+
 from build_test_artifacts import (
     key_expansion, state_to_bits,
     sbox_weights, shift_rows_perm, mix_columns_gf2, parity_coefficients,

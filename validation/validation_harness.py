@@ -10,7 +10,16 @@ For each test, log progress and final pass/fail counts. Save results.
 """
 import time
 import json
+import os
+import sys
 import numpy as np
+
+# Allow imports from construction/ (where build_test_artifacts.py lives)
+_HERE_HARNESS = os.path.dirname(os.path.abspath(__file__))
+_CONSTRUCTION = os.path.join(_HERE_HARNESS, '..', 'construction')
+sys.path.insert(0, _CONSTRUCTION)
+sys.path.insert(0, _HERE_HARNESS)
+
 from build_test_artifacts import (
     key_expansion, state_to_bits,
     SBOX, RCON, gf_mul,
@@ -344,6 +353,9 @@ if __name__ == "__main__":
         'monte_carlo_float64': mc_f64,
         'monte_carlo_float32': mc_f32,
     }
-    with open('/home/claude/scanner_output/14_validation_results.json', 'w') as f:
+    _HERE = os.path.dirname(os.path.abspath(__file__))
+    _OUT_DIR = os.path.join(_HERE, '..', 'last_run')
+    os.makedirs(_OUT_DIR, exist_ok=True)
+    with open(os.path.join(_OUT_DIR, '14_validation_results.json'), 'w') as f:
         json.dump(out, f, indent=2)
     print(f"\nDetailed results saved to scanner_output/14_validation_results.json")

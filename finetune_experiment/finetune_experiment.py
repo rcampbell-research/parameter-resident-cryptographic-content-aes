@@ -12,8 +12,15 @@ The experiment runs SGD on an L2-regression-to-zero target using random
 input batches, recording at logarithmically spaced step counts when each
 metric first fails.
 """
+import os
+import sys
 import numpy as np
 import pickle
+
+# Allow imports from construction/ (sibling directory)
+_HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(_HERE, '..', 'construction'))
+
 from build_test_artifacts import (
     build_aes_network, key_expansion, state_to_bits, parity_coefficients,
     SBOX, gf_mul
