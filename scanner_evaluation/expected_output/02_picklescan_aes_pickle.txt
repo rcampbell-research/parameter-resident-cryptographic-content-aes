@@ -1,0 +1,10 @@
+============================================================
+TEST 2: Picklescan v1.0.4 against AES-construction pickle
+Date: 2026-05-07T18:44:21Z
+============================================================
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 0
+Dangerous globals: 0
+
+Exit code: 0

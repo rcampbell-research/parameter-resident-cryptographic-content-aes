@@ -1,0 +1,29 @@
+============================================================
+TEST 10 (POSITIVE CONTROL): ModelScan v0.8.8 vs malicious pickle
+Date: 2026-05-07T18:45:04Z
+============================================================
+No settings file detected at /home/claude/modelscan-settings.toml. Using defaults. 
+
+Scanning /home/claude/artifacts/positive_control_malicious.pkl using modelscan.scanners.PickleUnsafeOpScan model scan
+
+--- Summary ---
+
+Total Issues: 1
+
+Total Issues By Severity:
+
+    - LOW: 0
+    - MEDIUM: 0
+    - HIGH: 0
+    - CRITICAL: 1
+
+--- Issues by Severity ---
+
+--- CRITICAL ---
+
+Unsafe operator found:
+  - Severity: CRITICAL
+  - Description: Use of unsafe operator 'system' from module 'posix'
+  - Source: /home/claude/artifacts/positive_control_malicious.pkl
+
+Exit code: 0

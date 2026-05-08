@@ -1,0 +1,26 @@
+============================================================
+ROUND-TRIP VERIFICATION
+============================================================
+Test key:        000102030405060708090a0b0c0d0e0f
+Test plaintext:  00112233445566778899aabbccddeeff
+Expected CT:     69c4e0d86a7b0430d8cdb78070b4c55a  (FIPS 197 Appendix C)
+
+--- Verifying: aes_construction.safetensors ---
+Master key recovered:   000102030405060708090a0b0c0d0e0f
+Master key expected:    000102030405060708090a0b0c0d0e0f
+Key extraction:         PASS
+Network ciphertext:     69c4e0d86a7b0430d8cdb78070b4c55a
+Expected ciphertext:    69c4e0d86a7b0430d8cdb78070b4c55a
+Oracle correctness:     PASS
+
+--- Verifying: aes_construction.pkl ---
+Master key recovered:   000102030405060708090a0b0c0d0e0f
+Master key expected:    000102030405060708090a0b0c0d0e0f
+Key extraction:         PASS
+Network ciphertext:     69c4e0d86a7b0430d8cdb78070b4c55a
+Expected ciphertext:    69c4e0d86a7b0430d8cdb78070b4c55a
+Oracle correctness:     PASS
+
+============================================================
+OVERALL: PASS - both artifacts contain operational AES-128
+============================================================

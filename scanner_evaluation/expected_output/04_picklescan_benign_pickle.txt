@@ -1,0 +1,10 @@
+============================================================
+TEST 4: Picklescan v1.0.4 against benign-control pickle
+Date: 2026-05-07T18:44:27Z
+============================================================
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 0
+Dangerous globals: 0
+
+Exit code: 0

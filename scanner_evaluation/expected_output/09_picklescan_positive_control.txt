@@ -1,0 +1,11 @@
+============================================================
+TEST 9 (POSITIVE CONTROL): Picklescan v1.0.4 vs malicious pickle
+Date: 2026-05-07T18:45:04Z
+============================================================
+/home/claude/artifacts/positive_control_malicious.pkl: dangerous import 'posix system' FOUND
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 1
+Dangerous globals: 1
+
+Exit code: 0

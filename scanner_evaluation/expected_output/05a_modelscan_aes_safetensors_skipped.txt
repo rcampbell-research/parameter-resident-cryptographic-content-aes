@@ -1,0 +1,22 @@
+============================================================
+TEST 5a: ModelScan v0.8.8 with --show-skipped flag
+Date: 2026-05-07T18:44:37Z
+============================================================
+No settings file detected at /home/claude/modelscan-settings.toml. Using defaults. 
+
+
+--- Summary ---
+
+ No issues found! 🎉
+
+--- Skipped --- 
+
+Total skipped: 1 - run with --show-skipped to see the full list.
+
+Skipped files list:
+
+The following file /home/claude/artifacts/aes_construction.safetensors was 
+skipped during a ModelScan scan: 
+Model Scan did not scan file
+
+Exit code: 0

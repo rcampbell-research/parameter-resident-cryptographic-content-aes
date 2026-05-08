@@ -1,0 +1,13 @@
+============================================================
+TEST 6: ModelScan v0.8.8 against AES-construction pickle
+Date: 2026-05-07T18:44:45Z
+============================================================
+No settings file detected at /home/claude/modelscan-settings.toml. Using defaults. 
+
+Scanning /home/claude/artifacts/aes_construction.pkl using modelscan.scanners.PickleUnsafeOpScan model scan
+
+--- Summary ---
+
+ No issues found! 🎉
+
+Exit code: 0

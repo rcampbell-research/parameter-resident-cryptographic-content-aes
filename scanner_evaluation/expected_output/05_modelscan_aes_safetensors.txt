@@ -1,0 +1,16 @@
+============================================================
+TEST 5: ModelScan v0.8.8 against AES-construction safetensors
+Date: 2026-05-07T18:44:32Z
+============================================================
+No settings file detected at /home/claude/modelscan-settings.toml. Using defaults. 
+
+
+--- Summary ---
+
+ No issues found! 🎉
+
+--- Skipped --- 
+
+Total skipped: 1 - run with --show-skipped to see the full list.
+
+Exit code: 0

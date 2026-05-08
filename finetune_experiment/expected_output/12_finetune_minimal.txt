@@ -1,0 +1,30 @@
+Building AES-128 construction... done.
+Initial: cipher OK, signature OK, 30 layers
+
+Regime     LR       Step   Cipher   Signature 
+--------------------------------------------------
+all        1e-05    1      FAIL     OK         (1s)
+all        1e-05    5      FAIL     OK         (2s)
+all        1e-05    20     FAIL     OK         (6s)
+all        1e-05    50     FAIL     OK         (12s)
+all        1e-05    100    FAIL     OK         (17s)
+
+key_only   1e-05    1      FAIL     OK         (0s)
+key_only   1e-05    5      FAIL     OK         (1s)
+key_only   1e-05    20     FAIL     OK         (2s)
+key_only   1e-05    50     FAIL     OK         (5s)
+key_only   1e-05    100    FAIL     OK         (8s)
+
+non_key    1e-05    1      FAIL     OK         (0s)
+non_key    1e-05    5      FAIL     OK         (1s)
+non_key    1e-05    20     FAIL     OK         (5s)
+non_key    1e-05    50     FAIL     OK         (10s)
+non_key    1e-05    100    FAIL     OK         (17s)
+
+==================================================
+SUMMARY
+==================================================
+Regime       LR       Cipher fails at    Signature fails at  
+all          1e-05    1                  > 100               
+key_only     1e-05    1                  > 100               
+non_key      1e-05    1                  > 100               

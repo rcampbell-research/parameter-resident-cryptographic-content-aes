@@ -1,0 +1,11 @@
+============================================================
+TEST 1: Picklescan v1.0.4 against AES-construction safetensors
+Date: 2026-05-07T18:44:16Z
+============================================================
+WARNING: could not parse /home/claude/artifacts/aes_construction.safetensors as pickle: at position 0, opcode b'\xe0' unknown
+----------- SCAN SUMMARY -----------
+Scanned files: 1
+Infected files: 0
+Dangerous globals: 0
+
+Exit code: 0

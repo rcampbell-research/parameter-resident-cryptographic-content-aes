@@ -1,0 +1,21 @@
+Higher-LR signature decay check
+LR       Step   Signature  Time  
+----------------------------------------
+1e-03    1      OK         0.8s
+1e-03    5      OK         1.3s
+1e-03    20     OK         5.1s
+1e-03    50     OK         9.7s
+1e-03    100    OK         16.6s
+  -> signature persists past 100 steps for lr=0.001
+
+1e-02    1      OK         0.5s
+1e-02    5      OK         1.4s
+1e-02    20     OK         5.2s
+1e-02    50     OK         10.0s
+1e-02    100    OK         17.1s
+  -> signature persists past 100 steps for lr=0.01
+
+1e-01    1      OK         0.5s
+1e-01    5      FAIL       1.6s
+  -> signature fails at step 5 for lr=0.1
+
