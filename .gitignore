@@ -36,3 +36,7 @@ Thumbs.db
 finetuning_results.pkl
 finetuning_minimal_results.pkl
 last_run/
+
+# Local-only working bundles (not part of the published repository)
+paired_oracle/
+paired_oracle.tar.gz
